@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+    
+		<OutputType>Exe</OutputType>
+		<RootNamespace>Using_EPBot64</RootNamespace>
+		<TargetFramework>net10.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="EPBot64">
+		<HintPath>EPBot64.dll</HintPath>
+		</Reference>
+	 </ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Extracting-information.vb" />
+		<Compile Remove="Hand-simulation.vb" />
+		<Compile Remove="Public-private-information.vb" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Update="Extracting-information.vb">
+			<ExcludeFromBuild>true</ExcludeFromBuild>
+		</Compile>
+		<Compile Update="Hand-simulation.vb">
+			<ExcludeFromBuild>true</ExcludeFromBuild>
+		</Compile>
+		<Compile Update="Public-private-information.vb">
+			<ExcludeFromBuild>true</ExcludeFromBuild>
+		</Compile>
+	</ItemGroup>
+
+</Project>
